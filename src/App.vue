@@ -1,28 +1,39 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <content class="main">
+    <ReportForm class="ReportForm"/>
+    <ReportTable class="ReportTable"/>
+  </content>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import ReportForm from './components/ReportForm';
+import ReportTable from './components/ReportTable';
 
 export default {
   name: 'App',
+
   components: {
-    HelloWorld
-  }
-}
+    ReportForm,
+    ReportTable
+  },
+};
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style scoped>
+  @import './global.css';
+
+  .main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .ReportForm {
+    width: 1000px;
+  }
+
+  .ReportTable {
+    width: 1000px;
+  }
 </style>
